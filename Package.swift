@@ -7,8 +7,8 @@ let package = Package(
     name: "SwiftEpeg",
     products: [
         .library(
-            name: "swift-epeg",
-            targets: ["swift-epeg"]),
+            name: "SwiftEpeg",
+            targets: ["SwiftEpeg"]),
     ],
     dependencies: [
     ],
@@ -18,10 +18,10 @@ let package = Package(
 			dependencies: []
 		),
         .target(
-            name: "swift-epeg",
+            name: "SwiftEpeg",
             dependencies: []),
         .testTarget(
             name: "swift-epegTests",
-            dependencies: ["swift-epeg"]),
+            dependencies: ["SwiftEpeg"]),
     ]
 )

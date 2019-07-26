@@ -8,7 +8,7 @@ let package = Package(
     products: [
         .library(
             name: "SwiftEpeg",
-            targets: ["SwiftEpeg"]),
+            targets: ["SwiftEpeg", "Cepeg"]),
     ],
     dependencies: [
     ],

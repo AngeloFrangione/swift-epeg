@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "swift-epeg",
+    name: "SwiftEpeg",
     products: [
         .library(
             name: "swift-epeg",
@@ -16,7 +16,6 @@ let package = Package(
 		.target(
 			name: "Cepeg",
 			dependencies: []
-
 		),
         .target(
             name: "swift-epeg",

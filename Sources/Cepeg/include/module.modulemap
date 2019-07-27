@@ -1,9 +1,0 @@
-module libexif {
-	umbrella header "libexif.h"
-	link "libexif"
-}
-
-module libjpeg {
-	umbrella header "libjpeg.h"
-	link "libjpeg"
-}

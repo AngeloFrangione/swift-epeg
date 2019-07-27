@@ -1,0 +1,4 @@
+module jpeg
+{
+  link "jpeg"
+}

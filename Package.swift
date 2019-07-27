@@ -14,6 +14,8 @@ let package = Package(
 
     ],
     targets: [
+		.systemLibrary(name: "jpeg", pkgConfig: "libjpeg", providers: [.brew(["libjpeg"])]),
+		.systemLibrary(name: "exif", pkgConfig: "libexif", providers: [.brew(["libexif"])]),
 		.target(
 			name: "Cepeg",
 			dependencies: []

@@ -1,0 +1,4 @@
+module exif
+{
+  link "exif"
+}

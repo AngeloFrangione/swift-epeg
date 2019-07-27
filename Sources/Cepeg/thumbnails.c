@@ -1,17 +1,18 @@
-#include "include/libepeg.h"
+#include "epeg_private.h"
+#include "epeg.h"
 
-void create_thumbnail_jpeg(const char *orignal, const char *destination)
+void create_thumbnail_jpeg(const char *orignal, const char *destination, const int dest_width)
 {
 		Epeg_Image *image = epeg_file_open(orignal);
-		static float ratio;
-		static int thumb_width;
-		static int thumb_height = 600;
-		static int thumb_quality = 85;
-		static char *thumb_comment = NULL;
+		float ratio;
+		int thumb_width = dest_width;
+		int thumb_height;
+		int thumb_quality = 100;
+		char *thumb_comment = NULL;
 
+		ratio = (float)thumb_width / (float)image->in.w;
+		thumb_height = (int)(image->in.h * ratio);
 		epeg_decode_size_set			(image, thumb_width, thumb_height);
-		ratio = thumb_height / image->in.h;
-		thumb_width = (int)(image->in.w * ratio);
 		epeg_quality_set				(image, thumb_quality);
 		epeg_thumbnail_comments_enable	(image, 1);
 		epeg_comment_set				(image, thumb_comment);

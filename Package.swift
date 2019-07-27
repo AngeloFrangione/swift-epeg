@@ -11,6 +11,7 @@ let package = Package(
             targets: ["SwiftEpeg", "Cepeg"]),
     ],
     dependencies: [
+
     ],
     targets: [
 		.target(
